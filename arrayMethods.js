@@ -44,6 +44,97 @@
 // How would you use map() and reduce() to flatten a nested array of arrays?
 
 // const nestedArr = [[1, 2], [3, 4], [5, 6]];
-// const flat=nestedArr.reduce((acc,curr)=>acc.concat(curr),[]);
 
-// console.log(flat)
+// const k=nestedArr.reduce((acc,curr)=>acc.concat(curr),[])
+//  console.log(k)
+
+
+// Slice method
+
+//DOESNT CHANGE THE ARRAY (IMMUTABLE)
+//empty arguments to slice methods lets you clone the array
+// let u=arr.slice();
+//starting index is inclusive and ending index is exclusive
+// let u=arr.slice(start,end);
+//if slice methods second argument is ommitted then it slices till the end of the array 
+
+//Indexes are considered while using slice method 
+    // let u=arr.slice(1,4);
+    // console.log(u);
+//can alsobe used with negative indexes
+    // let i=arr.slice(-4);
+    // console.log(i)
+
+
+//splice method 
+
+// Purpose: Modifies the array by removing, adding, or replacing elements.
+// Original Array: Changes the original array (mutable)
+// arr.splice(start, deleteCount, ...itemsToAdd); 
+// start: Index at which to start changes.
+// deleteCount: Number of elements to remove (optional).
+// ...itemsToAdd: Elements to insert (optional).
+
+// Can be used to add, remove, or replace elements in an array.
+// const arr=[1,2,3,4,5];
+// arr.splice(2,2,11,23);
+// console.log(arr);
+
+// // Returns an array of removed elements.
+// let k=arr.splice(1,2,11,12,13);
+// console.log(k);
+
+let arr=[1,2,3,4]
+//shift 
+//Removes the first element of an array.
+// let k=arr.shift();
+// console.log(k)
+
+
+//unshift 
+//Adds one or more elements to the beginning of an array.
+// let k=arr.unshift(11);
+// console.log(arr)
+// console.log(k);//returns len of new arr
+
+//flat
+//To flatten a given array
+const nestedArr = [[1, 2], [3, 4], [5, 6]];
+
+let u=nestedArr.flat();
+console.log(u)
+
+//Revise before interview 
+// /. Traversing and Transforming
+// forEach
+// map
+// 2. Searching
+// find
+// findIndex
+// includes
+// indexOf
+// lastIndexOf
+// 3. Filtering
+// filter
+// 4. Reducing
+// reduce
+// reduceRight
+// 5. Adding, Removing, and Modifying
+// push
+// pop
+// shift
+// unshift
+// splice
+// slice
+// 6. Sorting and Reversing
+// sort
+// reverse
+// 7. Joining and Splitting
+// join
+// concat
+// 8. Flattening and Mapping
+// flat
+// flatMap
+// 9. Testing
+// some
+// every
